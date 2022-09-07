@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import CheckoutItem from "../../components/CheckoutItem";
 
 const CartPage = () => {
-  const { cart } = useAppContext();
+  const { cart, createOrder, clearCart } = useAppContext();
+
+  const checkOut = () => {
+    createOrder();
+  };
 
   if (cart.length === 0) {
     return (
@@ -33,8 +37,12 @@ const CartPage = () => {
         })}
       </div>
       <div className="btn-container">
-        <Link to={"/checkout"}>Checkout</Link>
-        <button>Clear Shopping Cart</button>
+        <button onClick={checkOut} className="checkout-btn">
+          Checkout
+        </button>
+        <button className="clear-btn" onClick={clearCart}>
+          Clear Shopping Cart
+        </button>
       </div>
     </Wrapper>
   );

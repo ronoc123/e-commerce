@@ -57,6 +57,32 @@ const Wrapper = styled.div`
     width: 6rem;
     cursor: pointer;
   }
+  .btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    margin-top: 2rem;
+  }
+  .checkout-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    background: #b8ffc0;
+    color: #00800e;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .clear-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    background: #ffb2a8;
+    color: #9c1200;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
 `;
 
 export default Wrapper;

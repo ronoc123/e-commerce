@@ -11,9 +11,6 @@ const ProductPage = () => {
   return (
     <Wrapper>
       <h2 className="title">Our Collection</h2>
-      <div className="search-container">
-        <div>Filter</div>
-      </div>
       <div className="product-container">
         {product?.map((item) => {
           return <SingleProduct {...item} key={item._id} />;

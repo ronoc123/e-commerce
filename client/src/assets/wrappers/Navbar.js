@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 8rem;
   height: 7rem;
   border-bottom: 2px solid lightgrey;
   .logo-container {
@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     display: grid;
     place-content: center;
     font-size: 2.5rem;
+    justify-self: right;
   }
   .icon-title {
     display: grid;
@@ -57,6 +58,57 @@ const Wrapper = styled.div`
     height: 1.5rem;
     border-radius: 50%;
     padding-bottom: 0.12rem;
+  }
+  .login-container {
+    justify-self: end;
+    align-self: center;
+  }
+  .lgn-btn {
+    border-radius: 0.4rem;
+    background: black;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  .logout-btn {
+    border-radius: 0.4rem;
+    background: black;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  .small-screen {
+    display: none;
+  }
+
+  @media screen and (max-width: 1500px) {
+    grid-template-columns: 1fr 1fr 10rem;
+    .small-screen {
+      display: grid;
+      justify-self: right;
+      align-self: center;
+      margin-right: 5rem;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .logout-btn {
+      font-size: 1rem;
+    }
+    .lgn-btn {
+      font-size: 1rem;
+    }
+    .big-screen {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .very-small-screen {
+      display: none;
+    }
   }
 `;
 

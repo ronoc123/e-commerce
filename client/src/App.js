@@ -5,6 +5,7 @@ import CheckOutPage from "./pages/sharedLayout/CheckOutPage";
 import ProductPage from "./pages/sharedLayout/ProductPage";
 import SingleProductPage from "./pages/SingleProductPage";
 import CartPage from "./pages/sharedLayout/CartPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="products/:id" element={<SingleProductPage />} />
         <Route path="checkout" element={<CheckOutPage />} />
         <Route path="cart" element={<CartPage />} />
+        <Route path="login" element={<LoginPage />} />
       </Route>
     </Routes>
   );

@@ -22,12 +22,15 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     column-gap: 5rem;
-    height: 30rem;
+    row-gap: 5rem;
+    /* height: 30rem; */
     width: 80vw;
     text-align: center;
+    margin-bottom: 4rem;
   }
   .items-title {
     text-align: center;
+    margin-bottom: 4rem;
   }
   .single-container {
     display: grid;
@@ -64,6 +67,17 @@ const Wrapper = styled.div`
   img {
     width: 100%;
     height: 22rem;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .featured-items {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .featured-items {
+      grid-template-columns: 1fr;
+    }
   }
 `;
 

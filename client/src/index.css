@@ -30,3 +30,26 @@ li a {
   text-decoration: none;
   color: black;
 }
+:root {
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
+  /* primary/main color */
+  --clr-darkblue: #040d33;
+  --clr-darkgrey: #2c324a;
+  --clr-background-1: #f0eff4;
+  --clr-white: #fff;
+  --clr-black: #000000;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
+  --max-width: 1170px;
+  --bodyFont: Monospace;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
