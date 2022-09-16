@@ -55,7 +55,7 @@ const createOrder = async (req, res) => {
         quantity: item.amount,
       };
     }),
-    success_url: `${process.env.SERVER_URL}/checkout`,
+    success_url: `${process.env.SERVER_URL}checkout`,
     cancel_url: `${process.env.SERVER_URL}`,
   });
   console.log(req.user.userId);
