@@ -17,6 +17,13 @@ const Wrapper = styled.div`
     text-align: center;
     align-items: center;
   }
+  .link {
+    color: white;
+    display: grid;
+
+    height: 3rem;
+    justify-content: center;
+  }
 `;
 
 export default Wrapper;

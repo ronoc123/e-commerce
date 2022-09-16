@@ -29,7 +29,7 @@ const initialState = {
   alertText: "",
   alertType: "",
   user: user ? JSON.parse(user) : null,
-  showAlert: true,
+  showAlert: false,
   cart: cartItems ? JSON.parse(cartItems) : [],
   total_items: 0,
   total_amount: 0,

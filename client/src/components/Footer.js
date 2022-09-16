@@ -1,5 +1,5 @@
 import Wrapper from "../assets/wrappers/footer";
-import { AiOutlineLinkedin } from "react-icons/ai";
+import { AiOutlineLinkedin, AiOutlineMail } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
 
 const Footer = () => {
@@ -9,16 +9,16 @@ const Footer = () => {
       <div className="info-link-container">
         <div className="link">
           <span className="icon">
-            <AiOutlineLinkedin />
+            <AiOutlineMail />
           </span>
-          <span className="title">LinkedIn</span>
+          <span className="title">Kamperman.conor@gmail.com</span>
         </div>
-        <div className="link">
+        <a href="https://github.com/ronoc123" target="_blank" className="link">
           <span className="icon">
             <VscGithub />
           </span>
           <span className="title">Github</span>
-        </div>
+        </a>
       </div>
     </Wrapper>
   );

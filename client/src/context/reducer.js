@@ -82,6 +82,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       user: action.payload.user,
+      showAlert: true,
+      alertText: "Login successful redirecting...",
     };
   }
   if (action.type === SETUP_USER_ERROR) {
