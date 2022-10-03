@@ -16,6 +16,8 @@ import {
   DELETE_CART_ITEM,
   OPEN_SIDEBAR,
   CLOSE_SIDEBAR,
+  REDIRECT_LOGIN,
+  CLOSE_LOGIN,
 } from "./action";
 
 const reducer = (state, action) => {
@@ -133,6 +135,20 @@ const reducer = (state, action) => {
     return {
       ...state,
       isSidebarOpen: false,
+    };
+  }
+
+  if (action.type === REDIRECT_LOGIN) {
+    return {
+      ...state,
+      redirectLogin: true,
+    };
+  }
+
+  if (action.type === CLOSE_LOGIN) {
+    return {
+      ...state,
+      redirectLogin: false,
     };
   }
 

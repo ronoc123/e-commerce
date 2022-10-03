@@ -2,9 +2,14 @@ import { useAppContext } from "../../context/appContext";
 import Wrapper from "../../assets/wrappers/CartPage";
 import { Link } from "react-router-dom";
 import CheckoutItem from "../../components/CheckoutItem";
+import { useState } from "react";
+import Alert from "../../components/Alert";
+import Login from "../../components/Login";
 
 const CartPage = () => {
-  const { cart, createOrder, clearCart } = useAppContext();
+  const { cart, createOrder, clearCart, redirectLogin } = useAppContext();
+
+  const [isOpen, setIsopen] = useState(false);
 
   const checkOut = () => {
     createOrder();
@@ -25,6 +30,7 @@ const CartPage = () => {
 
   return (
     <Wrapper>
+      {redirectLogin && <Login />}
       <div className="heading">
         <div>Item</div>
         <div>Quantity</div>

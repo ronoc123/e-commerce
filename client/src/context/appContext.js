@@ -19,6 +19,8 @@ import {
   DELETE_CART_ITEM,
   OPEN_SIDEBAR,
   CLOSE_SIDEBAR,
+  REDIRECT_LOGIN,
+  CLOSE_LOGIN,
 } from "./action";
 const user = localStorage.getItem("user");
 const cartItems = localStorage.getItem("cartItems");
@@ -36,6 +38,7 @@ const initialState = {
   shipping_fee: 534,
   singleProduct: [],
   isSidebarOpen: false,
+  redirectLogin: false,
 };
 
 const AppContext = React.createContext();
@@ -164,9 +167,18 @@ const AppProvider = ({ children }) => {
           window.location = res.data.url;
           clearCart();
         });
+      // .catch((res) => console.log(res.data.msg));
     } catch (error) {
-      console.log(error);
+      if (error.response.data.msg === "Unauthorized.") {
+        dispatch({ type: REDIRECT_LOGIN });
+      }
+      console.log(error.response.data.msg);
     }
+  };
+
+  const closeLogin = () => {
+    console.log("closed");
+    dispatch({ type: CLOSE_LOGIN });
   };
 
   const openSidebar = () => {
@@ -197,6 +209,7 @@ const AppProvider = ({ children }) => {
         deleteCartItem,
         openSidebar,
         closeSidebar,
+        closeLogin,
       }}
     >
       {children}

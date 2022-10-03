@@ -22,3 +22,6 @@ export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
 
 export const OPEN_SIDEBAR = "OPEN_SIDEBAR";
 export const CLOSE_SIDEBAR = "CLOSE_SIDEBAR";
+
+export const REDIRECT_LOGIN = "REDIRECT_LOGIN";
+export const CLOSE_LOGIN = "CLOSE_LOGIN";
