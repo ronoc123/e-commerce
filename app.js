@@ -40,7 +40,11 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 app.use(xss());
 app.use(limiter);
 app.use(mongoSanitize());
