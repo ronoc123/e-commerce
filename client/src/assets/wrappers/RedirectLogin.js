@@ -66,6 +66,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     border: 2px solid black;
     background: none;
+    min-width: 5rem;
   }
   .p-title {
     text-align: center;
@@ -79,6 +80,12 @@ const Wrapper = styled.div`
   }
   .alert {
     text-align: center;
+  }
+  .btn-containers {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
   }
 `;
 

@@ -38,7 +38,8 @@ const Wrapper = styled.div`
   .login-btn {
     background: none;
     border: none;
-    width: 10rem;
+    width: 100%;
+    min-width: 5rem;
     height: 3rem;
     justify-self: center;
     margin-top: 2rem;
@@ -59,6 +60,13 @@ const Wrapper = styled.div`
   }
   .alert {
     text-align: center;
+  }
+  .btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    width: 60%;
+    justify-self: center;
   }
 `;
 

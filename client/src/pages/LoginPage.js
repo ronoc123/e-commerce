@@ -48,6 +48,15 @@ const LoginPage = () => {
     }
   };
 
+  const demoLogin = () => {
+    const currentUser = { email: "test@gmail.com", password: "123456" };
+    setupUser({
+      currentUser,
+      endPoint: "login",
+      alertText: "Logging in User...",
+    });
+  };
+
   useEffect(() => {
     if (user) {
       setTimeout(() => {
@@ -81,9 +90,14 @@ const LoginPage = () => {
           value={values.password}
           handleChange={handleChange}
         />
-        <button className="login-btn" type="submit">
-          {isLogin ? "Register" : "Login"}
-        </button>
+        <div className="btn-container">
+          <button className="login-btn" type="submit">
+            {isLogin ? "Register" : "Login"}
+          </button>
+          <button className="login-btn" onClick={demoLogin}>
+            Demo
+          </button>
+        </div>
         <p className="p-title">
           {isLogin ? "Already a member? " : "Not a member yet? "}
           <button
