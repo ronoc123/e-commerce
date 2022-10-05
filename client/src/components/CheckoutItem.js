@@ -7,7 +7,7 @@ const CheckoutItem = ({ price, amount, image, id }) => {
       <img src={image} alt="" />
       <div>{amount}</div>
       <div>${price / 100}</div>
-      <div>${(amount * price) / 100}</div>
+      <div className="big-screen">${(amount * price) / 100}</div>
       <button className="remove-btn" onClick={() => deleteCartItem(id)}>
         Remove
       </button>

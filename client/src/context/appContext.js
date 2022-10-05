@@ -167,12 +167,11 @@ const AppProvider = ({ children }) => {
           window.location = res.data.url;
           clearCart();
         });
-      // .catch((res) => console.log(res.data.msg));
     } catch (error) {
       if (error.response.data.msg === "Unauthorized.") {
         dispatch({ type: REDIRECT_LOGIN });
       }
-      console.log(error.response.data.msg);
+      console.log(error);
     }
   };
 

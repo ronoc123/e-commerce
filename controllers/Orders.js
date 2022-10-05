@@ -58,7 +58,6 @@ const createOrder = async (req, res) => {
     success_url: `${process.env.SERVER_URL}checkout`,
     cancel_url: `${process.env.SERVER_URL}`,
   });
-  console.log(req.user.userId);
 
   const order = await Order.create({
     orderItems,

@@ -60,28 +60,49 @@ const Wrapper = styled.div`
   .btn-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem;
+    place-items: center;
+    gap: 2rem;
     margin-top: 2rem;
+    /* border: 2px solid red; */
+    width: 70%;
+    /* width: 70vw; */
   }
   .checkout-btn {
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background: #b8ffc0;
     color: #00800e;
     border-radius: 0.5rem;
     padding: 1rem;
     cursor: pointer;
+    width: 100%;
+    max-width: 15rem;
+    height: 100%;
   }
   .clear-btn {
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background: #ffb2a8;
     color: #9c1200;
+    width: 100%;
+    height: 100%;
+    max-width: 15rem;
     border-radius: 0.5rem;
     padding: 1rem;
     cursor: pointer;
+  }
+  @media screen and (max-width: 900px) {
+    .single-item {
+      grid-template-columns: 5rem 1fr 1fr 1fr;
+    }
+    .heading {
+      grid-template-columns: 5rem 1fr 1fr 1fr;
+    }
+    .big-screen {
+      display: none;
+    }
   }
 `;
 

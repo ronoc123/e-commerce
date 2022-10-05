@@ -25,7 +25,7 @@ const Sidebar = () => {
           <Link to={"/product"} onClick={closeSidebar} className="link">
             <span className="link-name">Collection</span>
           </Link>
-          <Link to={"/checkout"} onClick={closeSidebar} className="link">
+          <Link to={"/cart"} onClick={closeSidebar} className="link">
             <span className="link-name">Checkout</span>
           </Link>
         </div>

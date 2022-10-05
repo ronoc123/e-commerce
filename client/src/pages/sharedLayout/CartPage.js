@@ -35,7 +35,7 @@ const CartPage = () => {
         <div>Item</div>
         <div>Quantity</div>
         <div>Price</div>
-        <div>Subtotal</div>
+        <div className="big-screen">Subtotal</div>
       </div>
       <div className="checkout-container">
         {cart.map((item) => {
@@ -47,7 +47,7 @@ const CartPage = () => {
           Checkout
         </button>
         <button className="clear-btn" onClick={clearCart}>
-          Clear Shopping Cart
+          Clear Cart
         </button>
       </div>
     </Wrapper>
