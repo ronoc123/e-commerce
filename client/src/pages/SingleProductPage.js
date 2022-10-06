@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const SingleProductPage = () => {
   const [number, setNumber] = useState(1);
+  const [showDescription, setShowDescription] = useState(false);
 
   const {
     fetchSingleProduct,
@@ -61,7 +62,21 @@ const SingleProductPage = () => {
             reviews={product?.numOfReviews}
           />
           <div className="price">${product?.price / 100}</div>
-          <div>{product?.description}</div>
+          <div>
+            {showDescription
+              ? product?.description
+              : product?.description.substring(0, 150)}
+            {showDescription ? (
+              <span className="dots" onClick={() => setShowDescription(false)}>
+                {" "}
+                Close
+              </span>
+            ) : (
+              <span className="dots" onClick={() => setShowDescription(true)}>
+                ...
+              </span>
+            )}
+          </div>
           <div className="category">
             Category : <span className="cata">{product?.category}</span>
           </div>

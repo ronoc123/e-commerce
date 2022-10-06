@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 8rem;
+  /* grid-template-columns: 1fr 1fr 1fr 8rem; */
+  grid-template-columns: 25rem 1fr 15rem 10rem;
   height: 7rem;
   border-bottom: 2px solid lightgrey;
   .logo-container {

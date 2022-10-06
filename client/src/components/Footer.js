@@ -1,5 +1,5 @@
 import Wrapper from "../assets/wrappers/footer";
-import { AiOutlineLinkedin, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
 
 const Footer = () => {

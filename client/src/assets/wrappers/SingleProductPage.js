@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   }
   img {
     width: 100%;
-    height: 30rem;
+    max-height: 30rem;
   }
   .product-title {
     text-transform: capitalize;
@@ -54,6 +54,11 @@ const Wrapper = styled.div`
     margin-bottom: 1rem;
     font-weight: 600;
   }
+  .dots {
+    cursor: pointer;
+
+    color: #0062ff;
+  }
 
   .add-btn {
     background: black;
@@ -62,6 +67,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     width: 30%;
     height: 2rem;
+    margin-bottom: 0.5rem;
   }
   .price {
     font-weight: 600;
@@ -83,6 +89,17 @@ const Wrapper = styled.div`
   }
   .avail {
     font-weight: 400;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .product-container {
+      grid-template-columns: 1fr;
+      margin-bottom: 2rem;
+    }
+    .info-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 `;
 
