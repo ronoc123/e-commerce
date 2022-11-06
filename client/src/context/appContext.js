@@ -74,7 +74,7 @@ const AppProvider = ({ children }) => {
 
   const setupUser = async ({ endPoint, currentUser, alertText }) => {
     dispatch({ type: SETUP_USER_BEGIN });
-
+    console.log(currentUser);
     try {
       const response = await axios.post(`/api/v1/auth/${endPoint}`, {
         name: currentUser.name[0],

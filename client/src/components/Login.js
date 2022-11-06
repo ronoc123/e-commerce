@@ -49,7 +49,11 @@ const Login = () => {
     }
   };
   const demoLogin = () => {
-    const currentUser = { email: "test@gmail.com", password: "123456" };
+    const currentUser = {
+      name: "",
+      email: ["Test@gmail.com"],
+      password: ["123456"],
+    };
     setupUser({
       currentUser,
       endPoint: "login",
